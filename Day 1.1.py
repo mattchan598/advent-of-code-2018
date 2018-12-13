@@ -10,12 +10,9 @@ except IOError:
 
 #Convert strings in lines to ints
 nums = []
-for x in lines:
-    nums.append(int(x))
+for n in lines:
+    nums.append(int(n))
 
 #sum up the list
-sum = 0
-for i in nums:
-    sum += i
-
-print(sum)
+ans = sum(nums)
+print(ans)
