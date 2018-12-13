@@ -1,3 +1,4 @@
+import time
 # Get inputs and put them into lines
 lines = []
 try:
@@ -17,16 +18,18 @@ for x in lines:
 # sum up the list and try to find a matching number
 sum = 0
 found = False
-appeared = []
+appeared = {0}
 ans = 0
+t0 = time.time()
 while not found:
     for i in nums:
         sum += i
-        print(sum)
         if sum not in appeared:
-            appeared.append(sum)
+            appeared.add(sum)
         else:
             ans = sum
             found = True
             break
+t1 = time.time()
 print(ans)
+print(t1-t0)
