@@ -10,12 +10,15 @@ try:
 except IOError:
     pass
 
+# Part 1
 # Create a dictionary of lowercase letters
 d = dict.fromkeys(string.ascii_lowercase, 0)
 num_twos = 0
 num_threes = 0
+ids = []
 
 for line in lines:
+    ids.append(line)
     for letter in line.strip():
         d[letter] += 1
     if 2 in d.values():
@@ -26,3 +29,4 @@ for line in lines:
 print(num_twos)
 print(num_threes)
 print(num_twos*num_threes)
+
