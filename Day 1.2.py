@@ -1,4 +1,3 @@
-import time
 # Get inputs and put them into lines
 lines = []
 try:
@@ -20,7 +19,6 @@ sum = 0
 found = False
 appeared = {0}
 ans = 0
-t0 = time.time()
 while not found:
     for i in nums:
         sum += i
@@ -30,6 +28,4 @@ while not found:
             ans = sum
             found = True
             break
-t1 = time.time()
 print(ans)
-print(t1-t0)
